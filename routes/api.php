@@ -98,3 +98,13 @@ Route::get('/conta/divi2',function(Request $request){
 $resultado = $segundonumero / $primeironumero;
 return $resultado;
 });
+
+Route::get('/dobrodonumero',function(Request $request){
+
+    $onumeroé = $request->input('onumeroé');
+    $resultado = $onumeroé * 2;
+    
+    return 'O dobro do ' . $onumeroé . ' é igual a ' . $resultado;
+    
+    });
+    
