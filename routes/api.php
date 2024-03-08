@@ -26,3 +26,12 @@ Route::get('/nome/idade/cidade',function(Request $request){
     return $nome .' '. $idade .' '. $cidade;
 
 });
+
+
+Route::get('/conta/adcao',function(Request $request){
+    $primeironumero = $request ->input('primeironumero');
+$segundonumero = $request ->input('segundonumero');
+   $resultado = $primeironumero + $segundonumero;
+return $resultado;
+});
+
