@@ -129,3 +129,20 @@ Route::get('/dobrodonumero',function(Request $request){
         $valorComDesconto = $preco - $valorDesconto;
         return $valorComDesconto;
         });
+
+        Route::get('/salario',function(Request $request){
+
+            $salarioanterior = $request ->input('salario');
+            $aumento = $request ->input('aumento');
+            $resultado = ($salarioanterior * $aumento) /100 ;
+            return 'o salario anterior é' .' '. $salarioanterior .' '. 'o novo salario é de' .' '. $resultado + $salarioanterior;
+            });
+            
+
+            Route::get('/pontos',function(Request $request){
+
+                $valorgasto = $request ->input('valorgasto');
+                $pontos = $valorgasto /10;
+                
+                return $pontos;
+                });
