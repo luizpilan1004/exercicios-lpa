@@ -108,3 +108,14 @@ Route::get('/dobrodonumero',function(Request $request){
     
     });
     
+
+    Route::get('/retangulo',function(Request $request){
+
+        $base = $request  ->input('base');
+        $altura = $request ->input('altura');
+    
+        $resultado = $base * $altura;
+    
+        return $resultado;
+    
+    });
