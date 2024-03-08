@@ -35,3 +35,14 @@ $segundonumero = $request ->input('segundonumero');
 return $resultado;
 });
 
+Route::get('/conta/sub',function(Request $request){
+
+    $primeironumero = $request->input('primeironumero');
+
+    $segundonumero = $request->input('segundonumero');
+
+$terceironumero = $request->input('terceironumero');
+
+$resultado = $primeironumero - $segundonumero - $terceironumero;
+return $resultado;
+});
